@@ -227,3 +227,46 @@ while True:
 #### 5(B) To write a Python PROGRAM to implement queue.
 #### PROGRAM
 ```
+queue = []
+
+def enqueue(item):
+    queue.append(item)
+
+def dequeue():
+    if not is_empty():
+        return queue.pop(0)
+    else:
+        raise IndexError("dequeue from empty queue")
+
+def is_empty():
+    return not queue
+
+def size():
+    return len(queue)
+
+def display():
+    print("Queue:", queue)
+
+# Example usage with user input
+while True:
+    value = input("Enter a value to enqueue (or 'done' to stop): ")
+    if value.lower() == 'done':
+        break
+    enqueue(value)
+
+display()
+
+if not is_empty():
+    print("After removing an element")
+    dequeue()
+    display()
+else:
+    print("Queue is empty")
+
+print("Size:", size())
+print("Is empty:", is_empty())
+```
+##
+#### 6(A) To write a Python PROGRAM for card of game in Python in List ADT.
+#### PROGRAM
+```
