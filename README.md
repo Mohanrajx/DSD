@@ -270,3 +270,42 @@ print("Is empty:", is_empty())
 #### 6(A) To write a Python PROGRAM for card of game in Python in List ADT.
 #### PROGRAM
 ```
+import random
+
+suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
+ranks = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King', 'Ace']
+deck = [(rank, suit) for suit in suits for rank in ranks]
+random.shuffle(deck)
+
+def deal_hand(num_cards):
+    return [deck.pop() for _ in range(num_cards)]
+
+def display_hand(player, hand):
+    print(f"{player}'s hand:")
+    for card in hand:
+        print(f"{card[0]} of {card[1]}")
+
+def determine_winner(player_hand, computer_hand):
+    player_ranks = [ranks.index(card[0]) for card in player_hand]
+    computer_ranks = [ranks.index(card[0]) for card in computer_hand]
+    player_score = sum(player_ranks)
+    computer_score = sum(computer_ranks)
+    if player_score > computer_score:
+        return "You win!"
+    elif player_score < computer_score:
+        return "You lose!"
+    else:
+        return "It's a tie!"
+
+player_hand = deal_hand(5)
+computer_hand = deal_hand(5)
+
+display_hand("Your", player_hand)
+display_hand("Computer's", computer_hand)
+
+print(determine_winner(player_hand, computer_hand))
+```
+##
+#### 6(B) To write a Python code for infix to postfix conversion.
+#### PROGRAM
+```
