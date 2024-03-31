@@ -200,6 +200,30 @@ key = int(input("Enter the element to search: "))
 print(f"Key element {key} found in the linked list" if llist.search(key) else f"Key element {key} not found in the linked list")
 ```
 ##
-# GM
+#### 5(A) To write a Python PROGRAM to insert elements into stack.
+#### PROGRAM
+```
 
+class Stack:
+    def __init__(self):
+        self.stack = []
 
+    def push(self, element):
+        self.stack.append(element)
+        self.display()
+
+    def display(self):
+        print("Stack:", self.stack)
+
+stack = Stack()
+
+while True:
+    element = input("Enter element (or 'done' to stop): ")
+    if element.lower() == 'done':
+        break
+    stack.push(element)
+```
+##
+#### 5(B) To write a Python PROGRAM to implement queue.
+#### PROGRAM
+```
