@@ -309,3 +309,39 @@ print(determine_winner(player_hand, computer_hand))
 #### 6(B) To write a Python code for infix to postfix conversion.
 #### PROGRAM
 ```
+def infix_to_postfix(expression):
+    precedence = {'+': 1, '-': 1, '*': 2, '/': 2, '^': 3}
+    stack = []
+    postfix = []
+    
+    for char in expression:
+        if char.isalnum():
+            postfix.append(char)
+        elif char == '(':
+            stack.append(char)
+        elif char == ')':
+            while stack and stack[-1] != '(':
+                postfix.append(stack.pop())
+            stack.pop()  # Discard the '('
+        else:  # Operator
+            while stack and precedence.get(stack[-1], 0) >= precedence.get(char, 0):
+                postfix.append(stack.pop())
+            stack.append(char)
+
+    while stack:
+        postfix.append(stack.pop())
+
+    return ''.join(postfix)
+
+# Get input from user
+infix_expression = input("Enter an infix expression: ")
+
+# Display infix expression
+print("Infix expression:", infix_expression)
+
+# Convert infix to postfix and display the result
+postfix_expression = infix_to_postfix(infix_expression)
+print("Postfix expression:", postfix_expression)
+```
+##
+# G.M 
