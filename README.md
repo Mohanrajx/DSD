@@ -98,37 +98,25 @@ tower_of_hanoi(n, 'A', 'C', 'B')
 class ArrayList:
     def __init__(self):
         self.array = []
-
     def append(self, element):
         self.array.append(element)
-
     def search(self, element):
         for i in range(len(self.array)):
             if self.array[i] == element:
-                return i
-        return -1
-
-# Creating an instance of ArrayList
+                return True, i
+        return False, -1
 arr_list = ArrayList()
-
-# Getting the number of elements in the list from the user
 n = int(input("Enter the number of elements in the list: "))
-
-# Getting the elements from the user
 for _ in range(n):
     element = int(input("Enter an element: "))
     arr_list.append(element)
-
-# Getting the element to search from the user
 element_to_search = int(input("Enter the element to search: "))
-
-# Searching for the element
-index = arr_list.search(element_to_search)
-
-if index != -1:
+found, index = arr_list.search(element_to_search)
+if found:
     print(f"Element {element_to_search} found at index {index}")
 else:
     print(f"Element {element_to_search} not found")
+
 ```
 ##
 #### 4(A) To write a Python PROGRAM to create linked list with n elements.
