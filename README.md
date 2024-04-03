@@ -156,11 +156,9 @@ class Node:
     def __init__(self, data):
         self.data = data
         self.next = None
-
 class LinkedList:
     def __init__(self):
         self.head = None
-
     def append(self, data):
         new_node = Node(data)
         if self.head is None:
@@ -170,27 +168,30 @@ class LinkedList:
         while last_node.next:
             last_node = last_node.next
         last_node.next = new_node
-
     def search(self, key):
         current = self.head
+        index = 0
         while current:
             if current.data == key:
-                return True
+                return True, index
             current = current.next
-        return False
-
+            index += 1
+        return False, -1
 llist = LinkedList()
 for _ in range(int(input("Enter the number of elements in the linked list: "))):
-    llist.append(int(input("Enter an element: ")))
+    llist.append(float(input("Enter an element: ")))
+key = float(input("Enter the element to search: "))
+found, index = llist.search(key)
+if found:
+    print(f"Key element {key} found at index {index} in the linked list")
+else:
+    print(f"Key element {key} not found in the linked list")
 
-key = int(input("Enter the element to search: "))
-print(f"Key element {key} found in the linked list" if llist.search(key) else f"Key element {key} not found in the linked list")
 ```
 ##
 #### 5(A) To write a Python PROGRAM to insert elements into stack.
 #### PROGRAM
 ```
-
 class Stack:
     def __init__(self):
         self.stack = []
@@ -199,16 +200,41 @@ class Stack:
         self.stack.append(element)
         self.display()
 
+    def pop(self, element=None):
+        if element is None:
+            if not self.is_empty():
+                self.stack.pop()
+                self.display()
+            else:
+                print("Stack is empty")
+        else:
+            try:
+                self.stack.remove(element)
+                self.display()
+            except ValueError:
+                print(f"Element '{element}' not found in the stack")
+
+    def is_empty(self):
+        return len(self.stack) == 0
+
     def display(self):
         print("Stack:", self.stack)
 
 stack = Stack()
 
 while True:
-    element = input("Enter element (or 'done' to stop): ")
-    if element.lower() == 'done':
+    action = input("Enter action (push/pop/done): ")
+    if action.lower() == 'done':
         break
-    stack.push(element)
+    elif action.lower() == 'push':
+        element = input("Enter element to push: ")
+        stack.push(element)
+    elif action.lower() == 'pop':
+        element = input("Enter element to pop (leave blank to pop the top element): ")
+        stack.pop(element if element else None)
+    else:
+        print("Invalid action. Please enter 'push', 'pop', or 'done'")
+
 ```
 ##
 #### 5(B) To write a Python PROGRAM to implement queue.
@@ -234,24 +260,30 @@ def size():
 def display():
     print("Queue:", queue)
 
-# Example usage with user input
+def remove_element(element):
+    if element in queue:
+        queue.remove(element)
+        print(f"Element '{element}' removed from the queue")
+    else:
+        print(f"Element '{element}' not found in the queue")
 while True:
-    value = input("Enter a value to enqueue (or 'done' to stop): ")
-    if value.lower() == 'done':
+    action = input("Enter 'enqueue' to add an item, 'remove' to remove a specific element, or 'done' to stop: ")
+    if action.lower() == 'done':
         break
-    enqueue(value)
-
+    elif action.lower() == 'enqueue':
+        value = input("Enter a value to enqueue: ")
+        enqueue(value)
+        display()
+    elif action.lower() == 'remove':
+        element_to_remove = input("Enter the element to remove from the queue: ")
+        remove_element(element_to_remove)
+        display()
+    else:
+        print("Invalid action")
 display()
-
-if not is_empty():
-    print("After removing an element")
-    dequeue()
-    display()
-else:
-    print("Queue is empty")
-
 print("Size:", size())
 print("Is empty:", is_empty())
+
 ```
 ##
 #### 6(A) To write a Python PROGRAM for card of game in Python in List ADT.
