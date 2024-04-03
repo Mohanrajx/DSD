@@ -24,7 +24,6 @@ from abc import ABC, abstractmethod
 
 class Operation(ABC):
 
-    @abstractmethod
     def operate(self, a, b):
         pass
 
