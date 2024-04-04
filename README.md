@@ -439,4 +439,37 @@ else:
 #### 7(B) IMPLEMENTATION OF BINARY SEARCHING TECHNIQUE
 ###### Write a Python PROGRAM to search an element in a given linear list using recursion 
 #### PROGRAM
-# GM
+```
+def binary_search(arr, low, high, x):
+    if high >= low:
+        mid = low + (high - low) // 2
+        if arr[mid] == x:
+            return mid
+        elif arr[mid] > x:
+            return binary_search(arr, low, mid - 1, x)
+        else:
+            return binary_search(arr, mid + 1, high, x)
+    else:
+        return -1
+arr = []
+n = int(input("Enter the number of elements in the sorted list: "))
+for _ in range(n):
+    element = float(input("Enter element: "))
+    arr.append(element)
+arr.sort()
+x = float(input("Enter the element to search for: "))
+result = binary_search(arr, 0, len(arr) - 1, x)
+
+if result != -1:
+    print(f"Element found at index {result}")
+else:
+    print("Element not found")
+```
+##
+### I shall expeditiously conclude the outstanding updates.
+##
+# GM 
+##
+##
+
+
