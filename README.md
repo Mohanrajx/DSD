@@ -414,4 +414,29 @@ if __name__ == "__main__":
     fcfs(processes)
 ```
 ##
-# GM 
+#### 7(A) To write a Python script for implementing linear search technique.
+#### PROGRAM
+```
+def linear_search(arr, x):
+    for i in range(len(arr)):
+        if arr[i] == x:
+            return i  
+    return -1  
+arr = []
+n = int(input("Enter the number of elements in the list: "))
+for _ in range(n):
+    element = float(input("Enter element: "))
+    arr.append(element)
+x = float(input("Enter the element to search for: "))
+result = linear_search(arr, x)
+
+if result != -1:
+    print(f"Element found at index {result}")
+else:
+    print("Element not found")
+```
+##
+#### 7(B) IMPLEMENTATION OF BINARY SEARCHING TECHNIQUE
+###### Write a Python PROGRAM to search an element in a given linear list using recursion 
+#### PROGRAM
+# GM
