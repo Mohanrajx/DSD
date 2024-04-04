@@ -363,4 +363,55 @@ postfix_expression = infix_to_postfix(infix_expression)
 print("Postfix expression:", postfix_expression)
 ```
 ##
-# G.M 
+#### 6(C). To write a Python PROGRAM for first come first serve scheduling PROGRAM.
+#### PROGRAM
+```
+def fcfs(processes):
+    # Initialize variables
+    total_waiting_time = 0
+    total_turnaround_time = 0
+
+    # Set initial values for the first process
+    current_time = 0
+
+    # Process and print each process
+    print("Process\tArrival Time\tBurst Time\tWaiting Time\tTurnaround Time")
+    for process in processes:
+        # Calculate waiting time
+        waiting_time = max(0, current_time - process[1])
+
+        # Calculate turnaround time
+        turnaround_time = waiting_time + process[2]
+
+        # Update total waiting and turnaround times
+        total_waiting_time += waiting_time
+        total_turnaround_time += turnaround_time
+
+        # Update current time
+        current_time += process[2]
+
+        # Print process details
+        print(f"{process[0]}\t{process[1]}\t\t{process[2]}\t\t{waiting_time}\t\t{turnaround_time}")
+
+    # Calculate average waiting and turnaround times
+    n = len(processes)
+    avg_waiting_time = total_waiting_time / n
+    avg_turnaround_time = total_turnaround_time / n
+
+    # Print average times
+    print(f"\nAverage Waiting Time: {avg_waiting_time}")
+    print(f"Average Turnaround Time: {avg_turnaround_time}")
+
+# Input process details
+if __name__ == "__main__":
+    n = int(input("Enter the number of processes: "))
+    processes = []
+    for i in range(1, n + 1):
+        arrival_time = float(input(f"Enter arrival time for process {i}: "))
+        burst_time = float(input(f"Enter burst time for process {i}: "))
+        processes.append((i, arrival_time, burst_time))
+    
+    fcfs(processes)
+```
+##
+# GM 
