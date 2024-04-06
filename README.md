@@ -474,7 +474,7 @@ def bubble_sort(arr):
         for j in range(0, n-i-1):
             if arr[j] > arr[j+1]:
                 arr[j], arr[j+1] = arr[j+1], arr[j]
-arr = list(map(int, input("Enter elements of the list separated by spaces: ").split()))
+arr = list(map(float, input("Enter elements of the list separated by spaces: ").split()))
 bubble_sort(arr)
 print("Sorted list:", arr)
 ```
