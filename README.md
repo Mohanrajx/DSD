@@ -1,4 +1,13 @@
 # DSD PROGRAM 
+#####
+
+---
+
+**Disclaimer:**
+
+These programs are for reference only. Do not copy them for use in assignments or labs, including the Data Structures Design (DSD) lab. Use them for learning and develop your own solutions independently. The author is not responsible for any misuse.
+
+---
 #### 1(A) Write a Python PROGRAM to calculate electricity bill for a given tariff.
 
 • 1 to 100 units – Rs. 10
