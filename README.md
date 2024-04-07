@@ -10,7 +10,7 @@
 • above 300 units – Rs. 25
 ###### PROGRAM
 ```
-units = int(input("Enter the number of units consumed:"))
+units = float(input("Enter the number of units consumed:"))
 
 billamount = units * 10 if units <= 100 else (1000 + (units - 100) * 15) if units <= 200 else (2500 + (units - 200) * 20) if units <= 300 else (4500 + (units - 300) * 25)
 
@@ -107,9 +107,9 @@ class ArrayList:
 arr_list = ArrayList()
 n = int(input("Enter the number of elements in the list: "))
 for _ in range(n):
-    element = int(input("Enter an element: "))
+    element = float(input("Enter an element: "))
     arr_list.append(element)
-element_to_search = int(input("Enter the element to search: "))
+element_to_search = float(input("Enter the element to search: "))
 found, index = arr_list.search(element_to_search)
 if found:
     print(f"Element {element_to_search} found at index {index}")
@@ -130,10 +130,10 @@ def create_linked_list():
     n = int(input("How many elements would you like to add? "))
     if n <= 0:
         return None
-    head = Node(int(input("Enter data item: ")))
+    head = Node(float(input("Enter data item: ")))
     current = head
     for _ in range(n - 1):
-        current.next = Node(int(input("Enter data item: ")))
+        current.next = Node(float(input("Enter data item: ")))
         current = current.next
     return head
 
