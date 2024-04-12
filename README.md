@@ -475,7 +475,8 @@ else:
     print("Element not found")
 ```
 ##
-#### 7(C) 
+#### 7(C) To write a Python PROGRAM to arrange the given elements using bubble sort.
+#### PROGRAM
 ```
 def bubble_sort(arr):
     n = len(arr)
@@ -488,6 +489,54 @@ bubble_sort(arr)
 print("Sorted list:", arr)
 ```
 ##
+#### 7(D) To write a Python PROGRAM to arrange the given elements using insertion sort.
+#### PROGRAM
+```
+def insertion_sort(arr):
+    for i in range(1, len(arr)):
+        key = arr[i]
+        j = i - 1
+        while j >= 0 and key < arr[j]:
+            arr[j + 1] = arr[j]
+            j -= 1
+        arr[j + 1] = key
+
+n = int(input("Enter the number of elements: "))
+arr = []
+for _ in range(n):
+    element = float(input("Enter element: "))
+    arr.append(element)
+
+insertion_sort(arr)
+
+print("Sorted array is:", arr)
+```
+##
+#### 7(E) To write a Python PROGRAM to arrange the given elements using selection sort.
+#### PROGRAM
+```
+def selection_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        min_idx = i
+        for j in range(i+1, n):
+            if arr[j] < arr[min_idx]:
+                min_idx = j
+        arr[i], arr[min_idx] = arr[min_idx], arr[i]
+    return arr
+
+arr = input("Enter the elements separated by spaces: ").split()
+arr = [float(num) for num in arr]
+
+sorted_arr = selection_sort(arr)
+print("Sorted array is:", sorted_arr)
+```
+##
+#### 8(A) To write a Python PROGRAM to print a binary tree in vertical order.
+#### PROGRAM
+```
+
+
 ### I shall expeditiously conclude the outstanding updates.
 ##
 # GM 
