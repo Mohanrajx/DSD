@@ -626,7 +626,7 @@ Vertical order traversal of binary tree is:
 
 ##
 #### 9A. To write a Python PROGRAM in order to traverse and search element from binary tree 🌲 .
-#### PROGRAM
+### PROGRAM
 
 <details>
   <summary><h5>74 lines of code</h5></summary>
@@ -710,7 +710,7 @@ else:
 ```
 </details>
 
-## EASIEST VERSION OF CODE
+#### EASIEST VERSION OF CODE
 ```
 class Node:
     def __init__(self, key):
