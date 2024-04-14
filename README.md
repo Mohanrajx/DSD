@@ -625,7 +625,86 @@ Vertical order traversal of binary tree is:
 </details>
 
 ##
-    
+#### 9A. To write a Python PROGRAM in order to traverse and search element from binary tree 🌲 .
+#### PROGRAM
+```
+class Node:
+    def __init__(self, key):
+        self.left = None
+        self.right = None
+        self.val = key
+        self.index = None
+
+def inorder_traversal(root):
+    if root:
+        inorder_traversal(root.left)
+        print(f"{root.val} at position {root.index}", end=" ")
+        inorder_traversal(root.right)
+
+def preorder_traversal(root):
+    if root:
+        print(f"{root.val} at position {root.index}", end=" ")
+        preorder_traversal(root.left)
+        preorder_traversal(root.right)
+
+def postorder_traversal(root):
+    if root:
+        postorder_traversal(root.left)
+        postorder_traversal(root.right)
+        print(f"{root.val} at position {root.index}", end=" ")
+
+def search_element(root, key, index=1):
+    if root is None or root.val == key:
+        if root:
+            root.index = index
+        return root
+
+    if root.val < key:
+        return search_element(root.right, key, 2 * index + 1)
+
+    return search_element(root.left, key, 2 * index)
+
+# Function to insert a new node with the given key
+def insert_node(root, key):
+    if root is None:
+        return Node(key)
+    else:
+        if key < root.val:
+            root.left = insert_node(root.left, key)
+        else:
+            root.right = insert_node(root.right, key)
+    return root
+
+# Get user input to build the binary tree
+def build_binary_tree():
+    root = None
+    elements = []
+    n = int(input("Enter the number of elements in the binary tree: "))
+    print("Enter the elements:",)
+    for _ in range(n):
+        key = float(input())
+        elements.append(key)
+        root = insert_node(root, key)
+    print("Elements entered:", elements)
+    return root
+root = build_binary_tree()
+
+print("\nInorder traversal:")
+inorder_traversal(root)
+print("\nPreorder traversal:")
+preorder_traversal(root)
+print("\nPostorder traversal:")
+postorder_traversal(root)
+
+key = float(input("\nEnter the element to search in the tree: "))
+result = search_element(root, key)
+if result:
+    print(f"Element {key} found in the tree at position {result.index}.")
+else:
+    print(f"Element {key} not found in the tree.")
+```
+##
+
 ### I shall expeditiously conclude the outstanding updates.
 ##
 # GM 
