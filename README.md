@@ -599,7 +599,7 @@ print("Vertical order traversal of binary tree is:")
 print_vertical_order(root)
 ```
 <details>
-  <summary><h3>Sample Output for 8A</h3></summary>
+  <summary><h4>Sample Output for 8A</h4></summary>
  
  ```
 Enter the value of the root node: 1
