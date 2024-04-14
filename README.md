@@ -627,6 +627,10 @@ Vertical order traversal of binary tree is:
 ##
 #### 9A. To write a Python PROGRAM in order to traverse and search element from binary tree 🌲 .
 #### PROGRAM
+
+<details>
+  <summary><h5>74 lines of code</h5></summary>
+
 ```
 class Node:
     def __init__(self, key):
@@ -702,9 +706,45 @@ if result:
     print(f"Element {key} found in the tree at position {result.index}.")
 else:
     print(f"Element {key} not found in the tree.")
+    
+```
+</details>
+
+## EASIEST VERSION OF CODE
+```
+class Node:
+    def __init__(self, key):
+        self.left = None
+        self.right = None
+        self.val = key
+        self.index = None
+
+def traverse(root, order=lambda r: (root := r) and traverse(r.left) + [r.val] + traverse(r.right) if r else []):
+    return order(root)
+
+def search(root, key, index=1):
+    if not root or root.val == key: root and setattr(root, 'index', index)
+    return root if not root or root.val == key else search(root.right, key, 2 * index + 1) if root.val < key else search(root.left, key, 2 * index)
+
+def insert(root, key):
+    return Node(key) if not root else (setattr(root, 'left', insert(root.left, key)) if key < root.val else setattr(root, 'right', insert(root.right, key)), root)[1]
+
+def build_tree():
+    root, elements = None, []
+    for _ in range(int(input("Enter the number of elements in the binary tree: "))): elements.append(float(input())) ; root = insert(root, elements[-1])
+    print("Elements entered:", elements)
+    return root
+
+root = build_tree()
+print("\nInorder traversal:", traverse(root))
+print("Preorder traversal:", traverse(root, lambda r: [r.val] + traverse(r.left) + traverse(r.right)))
+print("Postorder traversal:", traverse(root, lambda r: traverse(r.left) + traverse(r.right) + [r.val]))
+
+key = float(input("\nEnter the element to search in the tree: "))
+result = search(root, key)
+print(f"Element {key} found in the tree at position {result.index}." if result else f"Element {key} not found in the tree.")
 ```
 ##
-
 ### I shall expeditiously conclude the outstanding updates.
 ##
 # GM 
