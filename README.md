@@ -598,7 +598,6 @@ root = build_binary_tree()
 print("Vertical order traversal of binary tree is:")
 print_vertical_order(root)
 ```
-##
 <details>
   <summary><h3>Sample Output for 8A</h3></summary>
  
@@ -623,6 +622,8 @@ Vertical order traversal of binary tree is:
 3
 6
 ```
+</details>
+
 ##
     
 ### I shall expeditiously conclude the outstanding updates.
