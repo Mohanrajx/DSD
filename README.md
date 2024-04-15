@@ -160,268 +160,35 @@ display_linked_list(head)
 ##
 #### 4(B) To write a Python PROGRAM to search key element in a linked list.
 #### PROGRAM
-```
-class Node:
-    def __init__(self, data):
-        self.data = data
-        self.next = None
-class LinkedList:
-    def __init__(self):
-        self.head = None
-    def append(self, data):
-        new_node = Node(data)
-        if self.head is None:
-            self.head = new_node
-            return
-        last_node = self.head
-        while last_node.next:
-            last_node = last_node.next
-        last_node.next = new_node
-    def search(self, key):
-        current = self.head
-        index = 0
-        while current:
-            if current.data == key:
-                return True, index
-            current = current.next
-            index += 1
-        return False, -1
-llist = LinkedList()
-for _ in range(int(input("Enter the number of elements in the linked list: "))):
-    llist.append(float(input("Enter an element: ")))
-key = float(input("Enter the element to search: "))
-found, index = llist.search(key)
-if found:
-    print(f"Key element {key} found at index {index} in the linked list")
-else:
-    print(f"Key element {key} not found in the linked list")
+![Alt Text](https://github.com/Mohanrajx/Image/blob/c268a30deff0a33611d3758dd7c929bd16d24fb5/code_20240415_192205_via_10015_io.png)
 
-```
 ##
 #### 5(A) To write a Python PROGRAM to insert elements into stack.
 #### PROGRAM
-```
-class Stack:
-    def __init__(self):
-        self.stack = []
+![Alt Text](https://github.com/Mohanrajx/Image/blob/631dceab274802abb9b41477ca8ffa383da25c1f/code_20240415_191750_via_10015_io.png)
 
-    def push(self, element):
-        self.stack.append(element)
-        self.display()
 
-    def pop(self, element=None):
-        if element is None:
-            if not self.is_empty():
-                self.stack.pop()
-                self.display()
-            else:
-                print("Stack is empty")
-        else:
-            try:
-                self.stack.remove(element)
-                self.display()
-            except ValueError:
-                print(f"Element '{element}' not found in the stack")
-
-    def is_empty(self):
-        return len(self.stack) == 0
-
-    def display(self):
-        print("Stack:", self.stack)
-
-stack = Stack()
-
-while True:
-    action = input("Enter action (push/pop/done): ")
-    if action.lower() == 'done':
-        break
-    elif action.lower() == 'push':
-        element = input("Enter element to push: ")
-        stack.push(element)
-    elif action.lower() == 'pop':
-        element = input("Enter element to pop (leave blank to pop the top element): ")
-        stack.pop(element if element else None)
-    else:
-        print("Invalid action. Please enter 'push', 'pop', or 'done'")
-
-```
 ##
 #### 5(B) To write a Python PROGRAM to implement queue.
 #### PROGRAM
-```
-queue = []
+![Alt Text](https://github.com/Mohanrajx/Image/blob/1fbe617af697642a77c3a39d6c37f08353aadfb2/code_20240415_191439_via_10015_io.png)
 
-def enqueue(item):
-    queue.append(item)
-
-def dequeue():
-    if not is_empty():
-        return queue.pop(0)
-    else:
-        raise IndexError("dequeue from empty queue")
-
-def is_empty():
-    return not queue
-
-def size():
-    return len(queue)
-
-def display():
-    print("Queue:", queue)
-
-def remove_element(element):
-    if element in queue:
-        queue.remove(element)
-        print(f"Element '{element}' removed from the queue")
-    else:
-        print(f"Element '{element}' not found in the queue")
-while True:
-    action = input("Enter 'enqueue' to add an item, 'remove' to remove a specific element, or 'done' to stop: ")
-    if action.lower() == 'done':
-        break
-    elif action.lower() == 'enqueue':
-        value = input("Enter a value to enqueue: ")
-        enqueue(value)
-        display()
-    elif action.lower() == 'remove':
-        element_to_remove = input("Enter the element to remove from the queue: ")
-        remove_element(element_to_remove)
-        display()
-    else:
-        print("Invalid action")
-display()
-print("Size:", size())
-print("Is empty:", is_empty())
-
-```
 ##
 #### 6(A) To write a Python PROGRAM for card of game in Python in List ADT.
 #### PROGRAM
-```
-import random
+![Alt Text](https://github.com/Mohanrajx/Image/blob/6a86536a5ade17728f54a23a57b09471c89f2691/code_20240415_190343_via_10015_io.png)
 
-suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
-ranks = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King', 'Ace']
-deck = [(rank, suit) for suit in suits for rank in ranks]
-random.shuffle(deck)
-
-def deal_hand(num_cards):
-    return [deck.pop() for _ in range(num_cards)]
-
-def display_hand(player, hand):
-    print(f"{player}'s hand:")
-    for card in hand:
-        print(f"{card[0]} of {card[1]}")
-
-def determine_winner(player_hand, computer_hand):
-    player_ranks = [ranks.index(card[0]) for card in player_hand]
-    computer_ranks = [ranks.index(card[0]) for card in computer_hand]
-    player_score = sum(player_ranks)
-    computer_score = sum(computer_ranks)
-    if player_score > computer_score:
-        return "You win!"
-    elif player_score < computer_score:
-        return "You lose!"
-    else:
-        return "It's a tie!"
-
-player_hand = deal_hand(5)
-computer_hand = deal_hand(5)
-
-display_hand("Your", player_hand)
-display_hand("Computer's", computer_hand)
-
-print(determine_winner(player_hand, computer_hand))
-```
 ##
 #### 6(B) To write a Python code for infix to postfix conversion.
 #### PROGRAM
-```
-def infix_to_postfix(expression):
-    precedence = {'+': 1, '-': 1, '*': 2, '/': 2, '^': 3}
-    stack = []
-    postfix = []
-    
-    for char in expression:
-        if char.isalnum():
-            postfix.append(char)
-        elif char == '(':
-            stack.append(char)
-        elif char == ')':
-            while stack and stack[-1] != '(':
-                postfix.append(stack.pop())
-            stack.pop()  # Discard the '('
-        else:  # Operator
-            while stack and precedence.get(stack[-1], 0) >= precedence.get(char, 0):
-                postfix.append(stack.pop())
-            stack.append(char)
+![Alt Text](https://github.com/Mohanrajx/DSD/blob/02864c920f4f2ebe4a1506e700f6f4cce70320fc/code_20240415_185752_via_10015_io.png)
 
-    while stack:
-        postfix.append(stack.pop())
 
-    return ''.join(postfix)
-
-# Get input from user
-infix_expression = input("Enter an infix expression: ")
-
-# Display infix expression
-print("Infix expression:", infix_expression)
-
-# Convert infix to postfix and display the result
-postfix_expression = infix_to_postfix(infix_expression)
-print("Postfix expression:", postfix_expression)
-```
 ##
 #### 6(C). To write a Python PROGRAM for first come first serve scheduling PROGRAM.
 #### PROGRAM
-```
-def fcfs(processes):
-    # Initialize variables
-    total_waiting_time = 0
-    total_turnaround_time = 0
+![Alt Text](https://github.com/Mohanrajx/DSD/blob/f8eeeb9c8e97cff48a929784159753e08150db70/code_20240415_184907_via_10015_io.png)
 
-    # Set initial values for the first process
-    current_time = 0
-
-    # Process and print each process
-    print("Process\tArrival Time\tBurst Time\tWaiting Time\tTurnaround Time")
-    for process in processes:
-        # Calculate waiting time
-        waiting_time = max(0, current_time - process[1])
-
-        # Calculate turnaround time
-        turnaround_time = waiting_time + process[2]
-
-        # Update total waiting and turnaround times
-        total_waiting_time += waiting_time
-        total_turnaround_time += turnaround_time
-
-        # Update current time
-        current_time += process[2]
-
-        # Print process details
-        print(f"{process[0]}\t{process[1]}\t\t{process[2]}\t\t{waiting_time}\t\t{turnaround_time}")
-
-    # Calculate average waiting and turnaround times
-    n = len(processes)
-    avg_waiting_time = total_waiting_time / n
-    avg_turnaround_time = total_turnaround_time / n
-
-    # Print average times
-    print(f"\nAverage Waiting Time: {avg_waiting_time}")
-    print(f"Average Turnaround Time: {avg_turnaround_time}")
-
-# Input process details
-if __name__ == "__main__":
-    n = int(input("Enter the number of processes: "))
-    processes = []
-    for i in range(1, n + 1):
-        arrival_time = float(input(f"Enter arrival time for process {i}: "))
-        burst_time = float(input(f"Enter burst time for process {i}: "))
-        processes.append((i, arrival_time, burst_time))
-    
-    fcfs(processes)
-```
 ##
 #### 7(A) To write a Python script for implementing linear search technique.
 #### PROGRAM
@@ -569,120 +336,14 @@ Vertical order traversal of binary tree is:
 
 <details>
   <summary><h5>74 lines of code</h5></summary>
-
-```
-class Node:
-    def __init__(self, key):
-        self.left = None
-        self.right = None
-        self.val = key
-        self.index = None
-
-def inorder_traversal(root):
-    if root:
-        inorder_traversal(root.left)
-        print(f"{root.val} at position {root.index}", end=" ")
-        inorder_traversal(root.right)
-
-def preorder_traversal(root):
-    if root:
-        print(f"{root.val} at position {root.index}", end=" ")
-        preorder_traversal(root.left)
-        preorder_traversal(root.right)
-
-def postorder_traversal(root):
-    if root:
-        postorder_traversal(root.left)
-        postorder_traversal(root.right)
-        print(f"{root.val} at position {root.index}", end=" ")
-
-def search_element(root, key, index=1):
-    if root is None or root.val == key:
-        if root:
-            root.index = index
-        return root
-
-    if root.val < key:
-        return search_element(root.right, key, 2 * index + 1)
-
-    return search_element(root.left, key, 2 * index)
-
-# Function to insert a new node with the given key
-def insert_node(root, key):
-    if root is None:
-        return Node(key)
-    else:
-        if key < root.val:
-            root.left = insert_node(root.left, key)
-        else:
-            root.right = insert_node(root.right, key)
-    return root
-
-# Get user input to build the binary tree
-def build_binary_tree():
-    root = None
-    elements = []
-    n = int(input("Enter the number of elements in the binary tree: "))
-    print("Enter the elements:",)
-    for _ in range(n):
-        key = float(input())
-        elements.append(key)
-        root = insert_node(root, key)
-    print("Elements entered:", elements)
-    return root
-root = build_binary_tree()
-
-print("\nInorder traversal:")
-inorder_traversal(root)
-print("\nPreorder traversal:")
-preorder_traversal(root)
-print("\nPostorder traversal:")
-postorder_traversal(root)
-
-key = float(input("\nEnter the element to search in the tree: "))
-result = search_element(root, key)
-if result:
-    print(f"Element {key} found in the tree at position {result.index}.")
-else:
-    print(f"Element {key} not found in the tree.")
     
-```
+![Alt Text](https://github.com/Mohanrajx/Image/blob/2a59539071a38fd33b14bd288ea21f24ad72f11a/code_20240415_192603_via_10015_io.png)
+   
 </details>
 
 #### EASIEST VERSION OF CODE
-```
-class Node:
-    def __init__(self, key):
-        self.left = None
-        self.right = None
-        self.val = key
-        self.index = None
+![Alt Text](https://github.com/Mohanrajx/Image/blob/c14efe9ec99c8c01174a9fa3459ea761e1d0f58b/code_20240415_193149_via_10015_io.png)
 
-def traverse(root, order=lambda r: (root := r) and traverse(r.left) + [r.val] + traverse(r.right) if r else []):
-    return order(root)
-
-def search(root, key, index=1):
-    if not root or root.val == key: root and setattr(root, 'index', index)
-    return root if not root or root.val == key else search(root.right, key, 2 * index + 1) if root.val < key else search(root.left, key, 2 * index)
-
-def insert(root, key):
-    return Node(key) if not root else (setattr(root, 'left', insert(root.left, key)) if key < root.val else setattr(root, 'right', insert(root.right, key)), root)[1]
-
-def build_tree():
-    root, elements = None, []
-    for _ in range(int(input("Enter the number of elements in the binary tree: "))): elements.append(float(input())) ; root = insert(root, elements[-1])
-    print("Elements entered:", elements)
-    return root
-
-root = build_tree()
-print("\nInorder traversal:", traverse(root))
-print("Preorder traversal:", traverse(root, lambda r: [r.val] + traverse(r.left) + traverse(r.right)))
-print("Postorder traversal:", traverse(root, lambda r: traverse(r.left) + traverse(r.right) + [r.val]))
-
-key = float(input("\nEnter the element to search in the tree: "))
-result = search(root, key)
-print(f"Element {key} found in the tree at position {result.index}." if result else f"Element {key} not found in the tree.")
-```
 ##
 ### I shall expeditiously conclude the outstanding updates.
 ##
