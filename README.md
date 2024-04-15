@@ -18,6 +18,7 @@
 
 • above 300 units – Rs. 25
 #### PROGRAM
+![Alt Text](https://github.com/Mohanrajx/Image/blob/a15ee04334bcbf4c966f30723dfde5a194cd8aa9/code_20240415_222930_via_10015_io.png)
 ```
 units = float(input("Enter the number of units consumed:"))
 
@@ -28,135 +29,25 @@ print(f"The electricity bill for {units} units is Rs. {billamount}")
 ##
 #### 1(B) To write a Python PROGRAM for basic operations of calculator.
 #### PROGRAM
-```
-from abc import ABC, abstractmethod
+![Alt Text](https://github.com/Mohanrajx/Image/blob/5a3d4a58b469dd38398737a8dcd9c46fa4472765/code_20240415_223533_via_10015_io.png)
 
-class Operation(ABC):
-
-    def operate(self, a, b):
-        pass
-
-class Addition(Operation):
-
-    def operate(self, a, b):
-        return a + b
-
-class Subtraction(Operation):
-
-    def operate(self, a, b):
-        return a - b
-
-class Multiplication(Operation):
-
-    def operate(self, a, b):
-        return a * b
-
-class Division(Operation):
-
-    def operate(self, a, b):
-        if b != 0:
-            return a / b
-        else:
-            return "Cannot divide by zero"
-
-a = float(input("Enter the first number: "))
-b = float(input("Enter the second number: "))
-
-addition = Addition()
-print("Addition:", addition.operate(a, b))
-
-subtraction = Subtraction()
-print("Subtraction:", subtraction.operate(a, b))
-
-multiplication = Multiplication()
-print("Multiplication:", multiplication.operate(a, b))
-
-division = Division()
-print("Division:", division.operate(a, b))
-```
 ##
 #### 2(A) Write a Python PROGRAM to find factorial calculation using recursion.
 #### PROGRAM
-```
-def factorial(n):
-    return 1 if n == 0 else n * factorial(n - 1)
-
-num = int(input("Enter a number: "))
-print("Factorial of", num, "is", factorial(num))
-```
+![Alt Text](https://github.com/Mohanrajx/Image/blob/cc888af614df60a07eec37b8db67770bf02df2aa/code_20240415_224006_via_10015_io.png)
 ##
 #### 2(B) To write a Python PROGRAM for Tower of Hanoi using recursion.
 #### PROGRAM
-```
-def tower_of_hanoi(n, source, target, auxiliary):
-    if n == 1:
-        print(f"Move disk 1 from {source} to {target}")
-        return
-    tower_of_hanoi(n - 1, source, auxiliary, target)
-    print(f"Move disk {n} from {source} to {target}")
-    tower_of_hanoi(n - 1, auxiliary, target, source)
-n = int(input("Enter the number of disks: "))
-tower_of_hanoi(n, 'A', 'C', 'B')
-
-```
+![Alt Text](https://github.com/Mohanrajx/Image/blob/963a42b81347c01997890c9654dbc948a4251fac/code_20240415_224457_via_10015_io.png)
 ##
 #### 3(A) To write a Python PROGRAM to search element in a list using arrays.
 #### PROGRAM
-```
-class ArrayList:
-    def __init__(self):
-        self.array = []
-    def append(self, element):
-        self.array.append(element)
-    def search(self, element):
-        for i in range(len(self.array)):
-            if self.array[i] == element:
-                return True, i
-        return False, -1
-arr_list = ArrayList()
-n = int(input("Enter the number of elements in the list: "))
-for _ in range(n):
-    element = float(input("Enter an element: "))
-    arr_list.append(element)
-element_to_search = float(input("Enter the element to search: "))
-found, index = arr_list.search(element_to_search)
-if found:
-    print(f"Element {element_to_search} found at index {index}")
-else:
-    print(f"Element {element_to_search} not found")
-
-```
+![Alt Text](https://github.com/Mohanrajx/Image/blob/4e145c966b3f1e97f3ec812c564cf6fa2fff2970/code_20240415_224857_via_10015_io.png)
 ##
 #### 4(A) To write a Python PROGRAM to create linked list with n elements.
 #### PROGRAM
-```
-class Node:
-    def __init__(self, data=None):
-        self.data = data
-        self.next = None
+![Alt Text](https://github.com/Mohanrajx/Image/blob/9b8c68af9c2bde20ed007c76f3b7f163f1e7845f/code_20240415_225214_via_10015_io.png)
 
-def create_linked_list():
-    n = int(input("How many elements would you like to add? "))
-    if n <= 0:
-        return None
-    head = Node(float(input("Enter data item: ")))
-    current = head
-    for _ in range(n - 1):
-        current.next = Node(float(input("Enter data item: ")))
-        current = current.next
-    return head
-
-def display_linked_list(head):
-    current = head
-    while current:
-        print(current.data, end=" ")
-        current = current.next
-    print()
-
-head = create_linked_list()
-print("The linked list:", end=" ")
-display_linked_list(head)
-```
 ##
 #### 4(B) To write a Python PROGRAM to search key element in a linked list.
 #### PROGRAM
@@ -192,55 +83,12 @@ display_linked_list(head)
 ##
 #### 7(A) To write a Python script for implementing linear search technique.
 #### PROGRAM
-```
-def linear_search(arr, x):
-    for i in range(len(arr)):
-        if arr[i] == x:
-            return i  
-    return -1  
-arr = []
-n = int(input("Enter the number of elements in the list: "))
-for _ in range(n):
-    element = float(input("Enter element: "))
-    arr.append(element)
-x = float(input("Enter the element to search for: "))
-result = linear_search(arr, x)
-
-if result != -1:
-    print(f"Element found at index {result}")
-else:
-    print("Element not found")
-```
+![Alt Text](https://github.com/Mohanrajx/Image/blob/0e01d3dba820964c4a061007e0321951f53bbd91/code_20240415_225519_via_10015_io.png)
 ##
 #### 7(B) IMPLEMENTATION OF BINARY SEARCHING TECHNIQUE
 ###### Write a Python PROGRAM to search an element in a given linear list using recursion 
 #### PROGRAM
-```
-def binary_search(arr, low, high, x):
-    if high >= low:
-        mid = low + (high - low) // 2
-        if arr[mid] == x:
-            return mid
-        elif arr[mid] > x:
-            return binary_search(arr, low, mid - 1, x)
-        else:
-            return binary_search(arr, mid + 1, high, x)
-    else:
-        return -1
-arr = []
-n = int(input("Enter the number of elements in the sorted list: "))
-for _ in range(n):
-    element = float(input("Enter element: "))
-    arr.append(element)
-arr.sort()
-x = float(input("Enter the element to search for: "))
-result = binary_search(arr, 0, len(arr) - 1, x)
-
-if result != -1:
-    print(f"Element found at index {result}")
-else:
-    print("Element not found")
-```
+![Alt Text](https://github.com/Mohanrajx/Image/blob/b9c05483fc118a600df90ace875db112809ad669/code_20240415_230014_via_10015_io.png)
 ##
 #### 7(C) To write a Python PROGRAM to arrange the given elements using bubble sort.
 #### PROGRAM
@@ -258,46 +106,11 @@ print("Sorted list:", arr)
 ##
 #### 7(D) To write a Python PROGRAM to arrange the given elements using insertion sort.
 #### PROGRAM
-```
-def insertion_sort(arr):
-    for i in range(1, len(arr)):
-        key = arr[i]
-        j = i - 1
-        while j >= 0 and key < arr[j]:
-            arr[j + 1] = arr[j]
-            j -= 1
-        arr[j + 1] = key
-
-n = int(input("Enter the number of elements: "))
-arr = []
-for _ in range(n):
-    element = float(input("Enter element: "))
-    arr.append(element)
-
-insertion_sort(arr)
-
-print("Sorted array is:", arr)
-```
+![Alt Text](https://github.com/Mohanrajx/Image/blob/2ff43a5033a19c67655724387d0b5d84b2db9404/code_20240415_230257_via_10015_io.png)
 ##
 #### 7(E) To write a Python PROGRAM to arrange the given elements using selection sort.
 #### PROGRAM
-```
-def selection_sort(arr):
-    n = len(arr)
-    for i in range(n):
-        min_idx = i
-        for j in range(i+1, n):
-            if arr[j] < arr[min_idx]:
-                min_idx = j
-        arr[i], arr[min_idx] = arr[min_idx], arr[i]
-    return arr
-
-arr = input("Enter the elements separated by spaces: ").split()
-arr = [float(num) for num in arr]
-
-sorted_arr = selection_sort(arr)
-print("Sorted array is:", sorted_arr)
-```
+![Alt Text](https://github.com/Mohanrajx/Image/blob/a15ee04334bcbf4c966f30723dfde5a194cd8aa9/code_20240415_230616_via_10015_io.png)
 ##
 #### 8(A) To write a Python PROGRAM to print a binary tree in vertical order.
 #### PROGRAM
