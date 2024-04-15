@@ -534,70 +534,9 @@ print("Sorted array is:", sorted_arr)
 ##
 #### 8(A) To write a Python PROGRAM to print a binary tree in vertical order.
 #### PROGRAM
-```
-# Node structure for the binary tree
-class Node:
-    def __init__(self, key):
-        self.key = key
-        self.left = None
-        self.right = None
 
-# Function to perform a vertical traversal of the binary tree and populate the hash map
-def vertical_order(root, hd, map):
-    if root is None:
-        return
+![Alt Text](https://github.com/Mohanrajx/DSD/blob/bff99ac3409dd91fbb26ba7bcb630e10d55d75c8/Mohanrajx9A.png)
 
-    if hd in map:
-        map[hd].append(root.key)
-    else:
-        map[hd] = [root.key]
-
-    vertical_order(root.left, hd - 1, map)
-    vertical_order(root.right, hd + 1, map)
-
-# Function to print the binary tree in vertical order
-def print_vertical_order(root):
-    map = {}
-    vertical_order(root, 0, map)
-
-    # Sort the hash map based on keys (horizontal distance)
-    sorted_map = sorted(map.items())
-
-    for _, values in sorted_map:
-        for value in values:
-            print(value, end=" ")
-        print()
-
-# Function to build a binary tree from user input
-def build_binary_tree():
-    root_value = int(input("Enter the value of the root node: "))
-    root = Node(root_value)
-
-    nodes = [(root, "root")]
-    while nodes:
-        current, position = nodes.pop(0)
-
-        left_value = input(f"Enter the value of the left child of {position} (or 'None' if no left child): ")
-        if left_value.lower() != "none":
-            left_node = Node(int(left_value))
-            current.left = left_node
-            nodes.append((left_node, "left child of " + str(current.key)))
-
-        right_value = input(f"Enter the value of the right child of {position} (or 'None' if no right child): ")
-        if right_value.lower() != "none":
-            right_node = Node(int(right_value))
-            current.right = right_node
-            nodes.append((right_node, "right child of " + str(current.key)))
-
-    return root
-
-# Build the binary tree
-root = build_binary_tree()
-
-# Print the binary tree in vertical order
-print("Vertical order traversal of binary tree is:")
-print_vertical_order(root)
-```
 <details>
   <summary><h4>Sample Output for 8A</h4></summary>
  
