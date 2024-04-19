@@ -179,33 +179,18 @@ Sample Output :
 
 ![Alt Text](https://github.com/Mohanrajx/DSD/blob/bff99ac3409dd91fbb26ba7bcb630e10d55d75c8/Mohanrajx9A.png)
 
+##
 <details>
-  <summary><h4>Sample Output for 8A</h4></summary>
- 
- ```
-Enter the value of the root node: 1
-Enter the value of the left child of root (or 'None' if no left child): 2
-Enter the value of the right child of root (or 'None' if no right child): 3
-Enter the value of the left child of left child of 1 (or 'None' if no left child): 4
-Enter the value of the right child of left child of 1 (or 'None' if no right child): 5
-Enter the value of the left child of right child of 1 (or 'None' if no left child): none
-Enter the value of the right child of right child of 1 (or 'None' if no right child): 6
-Enter the value of the left child of left child of 2 (or 'None' if no left child): None
-Enter the value of the right child of left child of 2 (or 'None' if no right child): none
-Enter the value of the left child of right child of 2 (or 'None' if no left child): none
-Enter the value of the right child of right child of 2 (or 'None' if no right child): None
-Enter the value of the left child of right child of 3 (or 'None' if no left child): none
-Enter the value of the right child of right child of 3 (or 'None' if no right child): NoNe
-Vertical order traversal of binary tree is:
-4
-2
-1 5
-3
-6
-```
+<summary>
+Sample Output :
+</summary>
+
+![Alt Text](https://github.com/Mohanrajx/Image/blob/5b0a0634195e3d55c91ad07a9564b14924366ad1/code_20240419_123917_via_10015_io.png)
+
+
 </details>
 
-##
+---
 #### 9A. To write a Python PROGRAM in order to traverse and search element from binary tree 🌲 .
 ### PROGRAM
 
