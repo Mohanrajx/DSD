@@ -83,13 +83,38 @@ print(f"The electricity bill for {units} units is Rs. {billamount}")
 ##
 #### 7(A) To write a Python script for implementing linear search technique.
 #### PROGRAM
-![Alt Text](https://github.com/Mohanrajx/Image/blob/0e01d3dba820964c4a061007e0321951f53bbd91/code_20240415_225519_via_10015_io.png)
+![Alt Text](https://github.com/Mohanrajx/Image/blob/0e01d3dba820964c4a061007e0321951f53bbd91/code_20240415_225519_via_10015_io.png) 
 ##
+
+<details>
+<summary>
+Sample Output :
+</summary>
+
+![Alt Text](https://github.com/Mohanrajx/Image/blob/e4c2878593475f7726433751517de63fa6c12df8/code_20240419_120119_via_10015_io.png)
+
+
+</details>
+
+---
+
 #### 7(B) IMPLEMENTATION OF BINARY SEARCHING TECHNIQUE
 ###### Write a Python PROGRAM to search an element in a given linear list using recursion 
 #### PROGRAM
-![Alt Text](https://github.com/Mohanrajx/Image/blob/b9c05483fc118a600df90ace875db112809ad669/code_20240415_230014_via_10015_io.png)
+![Alt Text](https://github.com/Mohanrajx/Image/blob/09c31c02f8d93a60b88cc33d7760279195039b27/code_20240419_121735_via_10015_io.png)
 ##
+<details>
+<summary>
+Sample Output :
+</summary>
+
+![Alt Text](https://github.com/Mohanrajx/Image/blob/e2add4d25153f4ffd8c015d33900eff019d9113a/code_20240419_122033_via_10015_io.png)
+
+
+</details>
+
+---
+
 #### 7(C) To write a Python PROGRAM to arrange the given elements using bubble sort.
 #### PROGRAM
 ```
@@ -104,14 +129,51 @@ bubble_sort(arr)
 print("Sorted list:", arr)
 ```
 ##
+
+<details>
+<summary>
+Sample Output :
+</summary>
+
+![Alt Text](https://github.com/Mohanrajx/Image/blob/7f45e8d05288c8113e37d13d29c838b32291a620/code_20240419_122557_via_10015_io.png)
+
+
+</details>
+
+---
+
 #### 7(D) To write a Python PROGRAM to arrange the given elements using insertion sort.
 #### PROGRAM
 ![Alt Text](https://github.com/Mohanrajx/Image/blob/2ff43a5033a19c67655724387d0b5d84b2db9404/code_20240415_230257_via_10015_io.png)
 ##
+<details>
+<summary>
+Sample Output :
+</summary>
+
+![Alt Text](https://github.com/Mohanrajx/Image/blob/3f131ac64277f6aa860fe72d79455fefb5298dfb/code_20240419_122951_via_10015_io.png)
+
+
+</details>
+
+---
+
 #### 7(E) To write a Python PROGRAM to arrange the given elements using selection sort.
 #### PROGRAM
 ![Alt Text](https://github.com/Mohanrajx/Image/blob/a15ee04334bcbf4c966f30723dfde5a194cd8aa9/code_20240415_230616_via_10015_io.png)
 ##
+<details>
+<summary>
+Sample Output :
+</summary>
+
+![Alt Text](https://github.com/Mohanrajx/Image/blob/8045453d809d1f05046e3008bc7caa4abfb154dc/code_20240419_123200_via_10015_io.png)
+
+
+</details>
+
+---
+
 #### 8(A) To write a Python PROGRAM to print a binary tree in vertical order.
 #### PROGRAM
 
@@ -158,6 +220,17 @@ Vertical order traversal of binary tree is:
 ![Alt Text](https://github.com/Mohanrajx/Image/blob/c14efe9ec99c8c01174a9fa3459ea761e1d0f58b/code_20240415_193149_via_10015_io.png)
 
 ##
+<details>
+<summary>
+Sample Output :
+</summary>
+
+![Alt Text](https://github.com/Mohanrajx/Image/blob/d78a7fa0a3c90ac5eb05e77cb95104aa201bf30f/code_20240419_123509_via_10015_io.png)
+
+
+</details>
+
+---
 ### I shall expeditiously conclude the outstanding updates.
 ##
 # GM 
