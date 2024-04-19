@@ -27,60 +27,190 @@ billamount = units * 10 if units <= 100 else (1000 + (units - 100) * 15) if unit
 print(f"The electricity bill for {units} units is Rs. {billamount}")
 ```
 ##
+<details>
+<summary>
+Sample Output :
+</summary>
+
+![Alt Text](https://github.com/Mohanrajx/Image/blob/6269248e61043c9e5cf7647b523267ada2a8b0e9/code_20240419_131456_via_10015_io.png)
+
+
+</details>
+
+---
 #### 1(B) To write a Python PROGRAM for basic operations of calculator.
 #### PROGRAM
 ![Alt Text](https://github.com/Mohanrajx/Image/blob/5a3d4a58b469dd38398737a8dcd9c46fa4472765/code_20240415_223533_via_10015_io.png)
 
 ##
+<details>
+<summary>
+Sample Output :
+</summary>
+
+![Alt Text](https://github.com/Mohanrajx/Image/blob/e742342adeadd5f1ee62a5a4af6a754c3497dcb4/code_20240419_131256_via_10015_io.png)
+
+
+</details>
+
+---
 #### 2(A) Write a Python PROGRAM to find factorial calculation using recursion.
 #### PROGRAM
 ![Alt Text](https://github.com/Mohanrajx/Image/blob/cc888af614df60a07eec37b8db67770bf02df2aa/code_20240415_224006_via_10015_io.png)
 ##
+<details>
+<summary>
+Sample Output :
+</summary>
+
+![Alt Text](https://github.com/Mohanrajx/Image/blob/f4612d092946ae041a57c93bd7c25ecc0d4edbdb/code_20240419_131109_via_10015_io.png)
+
+
+</details>
+
+---
 #### 2(B) To write a Python PROGRAM for Tower of Hanoi using recursion.
 #### PROGRAM
 ![Alt Text](https://github.com/Mohanrajx/Image/blob/963a42b81347c01997890c9654dbc948a4251fac/code_20240415_224457_via_10015_io.png)
 ##
+<details>
+<summary>
+Sample Output :
+</summary>
+
+![Alt Text](https://github.com/Mohanrajx/Image/blob/f315b27d9351cc1191414da4ad3d3c49dd3b0d7e/code_20240419_130901_via_10015_io.png)
+
+
+</details>
+
+---
 #### 3(A) To write a Python PROGRAM to search element in a list using arrays.
 #### PROGRAM
 ![Alt Text](https://github.com/Mohanrajx/Image/blob/4e145c966b3f1e97f3ec812c564cf6fa2fff2970/code_20240415_224857_via_10015_io.png)
 ##
+<details>
+<summary>
+Sample Output :
+</summary>
+
+![Alt Text](https://github.com/Mohanrajx/Image/blob/0f5f6dcb9f0e9cc214ee41d448b89cacdc58a6a9/code_20240419_130630_via_10015_io.png)
+
+
+</details>
+
+---
 #### 4(A) To write a Python PROGRAM to create linked list with n elements.
 #### PROGRAM
 ![Alt Text](https://github.com/Mohanrajx/Image/blob/9b8c68af9c2bde20ed007c76f3b7f163f1e7845f/code_20240415_225214_via_10015_io.png)
 
 ##
+<details>
+<summary>
+Sample Output :
+</summary>
+
+![Alt Text](https://github.com/Mohanrajx/Image/blob/980f658192ee4e94691ceb8f8092acd243b6f214/code_20240419_130419_via_10015_io.png)
+
+
+</details>
+
+---
 #### 4(B) To write a Python PROGRAM to search key element in a linked list.
 #### PROGRAM
 ![Alt Text](https://github.com/Mohanrajx/Image/blob/c268a30deff0a33611d3758dd7c929bd16d24fb5/code_20240415_192205_via_10015_io.png)
 
 ##
+<details>
+<summary>
+Sample Output :
+</summary>
+
+![Alt Text](https://github.com/Mohanrajx/Image/blob/0d6a1f5b5b13bd9383de7f0d57c5a13494e8e285/code_20240419_130217_via_10015_io.png)
+
+
+</details>
+
+---
 #### 5(A) To write a Python PROGRAM to insert elements into stack.
 #### PROGRAM
 ![Alt Text](https://github.com/Mohanrajx/Image/blob/631dceab274802abb9b41477ca8ffa383da25c1f/code_20240415_191750_via_10015_io.png)
 
-
 ##
+<details>
+<summary>
+Sample Output :
+</summary>
+
+![Alt Text](https://github.com/Mohanrajx/Image/blob/3265f26616e41b0566440d7fed09821c535f9f77/code_20240419_125957_via_10015_io.png)
+
+
+</details>
+
+---
 #### 5(B) To write a Python PROGRAM to implement queue.
 #### PROGRAM
 ![Alt Text](https://github.com/Mohanrajx/Image/blob/1fbe617af697642a77c3a39d6c37f08353aadfb2/code_20240415_191439_via_10015_io.png)
 
 ##
+<details>
+<summary>
+Sample Output :
+</summary>
+
+![Alt Text](https://github.com/Mohanrajx/Image/blob/198a664cabfb60ac94655947437c39e0f460b866/code_20240419_125652_via_10015_io.png)
+
+
+</details>
+
+---
 #### 6(A) To write a Python PROGRAM for card of game in Python in List ADT.
 #### PROGRAM
 ![Alt Text](https://github.com/Mohanrajx/Image/blob/6a86536a5ade17728f54a23a57b09471c89f2691/code_20240415_190343_via_10015_io.png)
 
 ##
+<details>
+<summary>
+Sample Output :
+</summary>
+
+![Alt Text](https://github.com/Mohanrajx/Image/blob/2b2eadd9d7e9d8a4ac9e51decd1501b8e2a98d8e/code_20240419_125407_via_10015_io.png)
+
+
+</details>
+
+---
 #### 6(B) To write a Python code for infix to postfix conversion.
 #### PROGRAM
 ![Alt Text](https://github.com/Mohanrajx/DSD/blob/02864c920f4f2ebe4a1506e700f6f4cce70320fc/code_20240415_185752_via_10015_io.png)
 
-
 ##
+<details>
+<summary>
+Sample Output :
+</summary>
+
+![Alt Text](https://github.com/Mohanrajx/Image/blob/54a2b9a61bbfde75dbb29077b050429a2207aca8/code_20240419_125139_via_10015_io.png)
+
+
+</details>
+
+---
 #### 6(C). To write a Python PROGRAM for first come first serve scheduling PROGRAM.
 #### PROGRAM
 ![Alt Text](https://github.com/Mohanrajx/DSD/blob/f8eeeb9c8e97cff48a929784159753e08150db70/code_20240415_184907_via_10015_io.png)
 
 ##
+<details>
+<summary>
+Sample Output :
+</summary>
+
+![Alt Text](https://github.com/Mohanrajx/Image/blob/48c741f1df267f2f5bda76e294cbba1e9c58bcac/code_20240419_124745_via_10015_io.png)
+
+
+</details>
+
+---
 #### 7(A) To write a Python script for implementing linear search technique.
 #### PROGRAM
 ![Alt Text](https://github.com/Mohanrajx/Image/blob/0e01d3dba820964c4a061007e0321951f53bbd91/code_20240415_225519_via_10015_io.png) 
