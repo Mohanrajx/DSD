@@ -345,6 +345,37 @@ Sample Output :
 
 </details>
 
+#### 9(B). Python PROGRAM for preorder traversal to search element from binary 🌲..
+#### PROGRAM
+
+![Alt Text](https://github.com/Mohanrajx/Image/blob/e385c08bfcdc0295b4c044c67517f02ab9313a6f/code_20240428_181323_via_10015_io.png)
+
+<details>
+<summary>
+Sample Output :
+</summary>
+
+![Alt Text](https://github.com/Mohanrajx/Image/blob/4a7a8cccee209e34be8b73045feedf82e5f21871/code_20240428_181524_via_10015_io.png)
+
+
+</details>
+
+#### 9(C).Python PROGRAM for postorder traversal to search element from binary tree...
+#### PROGRAM
+![Alt Text](https://github.com/Mohanrajx/Image/blob/ee2ba85ad20b7925b5380b897a885095bc28ca6e/code_20240428_183128_via_10015_io.png)
+
+<details>
+<summary>
+Sample Output :
+</summary>
+
+![Alt Text](https://github.com/Mohanrajx/Image/blob/ee2ba85ad20b7925b5380b897a885095bc28ca6e/code_20240428_183308_via_10015_io.png)
+
+
+</details>
+
+---
+---
 ---
 ### I shall expeditiously conclude the outstanding updates.
 ##
